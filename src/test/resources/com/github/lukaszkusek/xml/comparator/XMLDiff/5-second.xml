@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ The MIT License (MIT)
+  ~
+  ~ Copyright (c) 2013 Lukasz Kusek
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy of
+  ~ this software and associated documentation files (the "Software"), to deal in
+  ~ the Software without restriction, including without limitation the rights to
+  ~ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+  ~ the Software, and to permit persons to whom the Software is furnished to do so,
+  ~ subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+  ~ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  ~ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+  ~ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  ~ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+
+<Response>
+    <UniqueID ID="0389bcad-de82-4b09-a5e3-d2c892aea633" Type="1" ID_Context="VIT"
+              Instance="2012-07-20T10:44:30.495Z">
+        <CompanyName TravelSector="1" CodeContext="IATA" Code="ZX"/>
+    </UniqueID>
+    <Profile CreateDateTime="2012-07-20T10:44:18.179Z" LastModifyDateTime="2012-07-20T10:44:30.495Z"
+             ProfileType="1" ProfileSubType="VIT">
+        <Customer PrefLangID="en" Gender="Unknown">
+            <PersonName>
+                <NamePrefix>issM</NamePrefix>
+                <GivenName>eZo</GivenName>
+                <Surname>sarePotn</Surname>
+            </PersonName>
+            <Telephone DefaultInd="1" AreaCityCode="403" PhoneNumber="7961517" PhoneType="Cell"/>
+            <Email DefaultInd="1">pon.a.tcmssmrh@lzeeoio.tao</Email>
+            <Address DefaultInd="1" Type="1">
+                <StreetNmbr>Dv gri1eneu Dnda1</StreetNmbr>
+                <CityName>twaOta</CityName>
+                <PostalCode>K1PL27</PostalCode>
+                <StateProv StateCode="ON"/>
+                <CountryName Code="CA"/>
+            </Address>
+        </Customer>
+        <PrefCollections/>
+        <TPA_ProfileExtensions>
+            <SpecialDate Description="BIRTHDATE" Date="1992-11-23"/>
+            <Password LoginID="0389bcad-de82-4b09-a5e3-d2c892aea633" Password="FAKE"
+                      PasswordHintQuestion="reminderQuestion2" PasswordHintAnswer="FAKE"/>
+            <ProfileStatus Active="Active"/>
+            <Consent Category="INFORMATION SHARING" ContactType="DO NOT CONTACT"
+                     CategoryType="WITH NO EXTERNAL SOURCE"/>
+            <Consent Category="MARKETING" ContactType="DO NOT CONTACT" CategoryType="EMAIL CAMPAIGN"/>
+        </TPA_ProfileExtensions>
+    </Profile>
+</Response>

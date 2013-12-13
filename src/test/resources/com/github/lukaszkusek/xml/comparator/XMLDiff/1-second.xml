@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ The MIT License (MIT)
+  ~
+  ~ Copyright (c) 2013 Lukasz Kusek
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy of
+  ~ this software and associated documentation files (the "Software"), to deal in
+  ~ the Software without restriction, including without limitation the rights to
+  ~ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+  ~ the Software, and to permit persons to whom the Software is furnished to do so,
+  ~ subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+  ~ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  ~ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+  ~ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  ~ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+<Response>
+    <UniqueID ID="116207556" Type="1" ID_Context="VIT" Instance="2012-05-08T12:25:16.083156">
+        <CompanyName TravelSector="1" CodeContext="IATA" Code="ZX"/>
+    </UniqueID>
+    <Profile CreateDateTime="2011-04-11T15:36:02.892912" LastModifyDateTime="2012-05-08T12:25:16.083156"
+             ProfileType="1" ProfileSubType="VIT">
+        <Customer PrefLangID="en" Gender="Unknown">
+            <PersonName>
+                <NamePrefix>MS</NamePrefix>
+                <GivenName>FAKE</GivenName>
+                <Surname>FAKE</Surname>
+            </PersonName>
+            <Telephone DefaultInd="1" AreaCityCode="604" PhoneNumber="80275461" PhoneType="Business"/>
+            <Telephone DefaultInd="0" AreaCityCode="604" PhoneNumber="51015967" PhoneType="Home"/>
+            <Telephone DefaultInd="0" AreaCityCode="604" PhoneNumber="96195526" PhoneType="Cell"/>
+            <Email EmailType="1" FormatType="Text" DefaultInd="1">fake1@abc.com</Email>
+            <Email EmailType="1" FormatType="Text" DefaultInd="0">fake2@abc.com</Email>
+            <Address DefaultInd="1" Type="1">
+                <StreetNmbr>STREET1</StreetNmbr>
+                <CityName>CITY_NAME1</CityName>
+                <PostalCode>POSTAL1</PostalCode>
+                <StateProv StateCode="BC"/>
+                <CountryName Code="CA"/>
+            </Address>
+            <Address DefaultInd="0" Type="25">
+                <StreetNmbr>STREET2</StreetNmbr>
+                <CityName>CITY2</CityName>
+                <PostalCode>POSTAL2</PostalCode>
+                <StateProv StateCode="BC"/>
+                <CountryName Code="CA"/>
+            </Address>
+            <PaymentForm DefaultInd="1">
+                <PaymentCard
+                        CardNumber="12345"
+                        CardCode="VI" CardType="100" ExpireDate=""/>
+            </PaymentForm>
+            <PaymentForm DefaultInd="0">
+                <PaymentCard
+                        CardNumber="67890"
+                        CardCode="VI" CardType="1" EffectiveDate="0109"
+                        ExpireDate="abcd">
+                    <CardHolderName>FAKE FAKE
+                    </CardHolderName>
+                </PaymentCard>
+            </PaymentForm>
+            <PaymentForm DefaultInd="0">
+                <PaymentCard
+                        CardNumber="1234"
+                        CardCode="BT" CardType="100" ExpireDate=""/>
+            </PaymentForm>
+            <PaymentForm DefaultInd="0">
+                <PaymentCard
+                        CardNumber="5678"
+                        CardCode="BT" CardType="100" ExpireDate=""/>
+            </PaymentForm>
+            <PaymentForm DefaultInd="0">
+                <PaymentCard
+                        CardNumber="90"
+                        CardCode="BT" CardType="100" ExpireDate=""/>
+            </PaymentForm>
+            <CustLoyalty TravelSector="1" MembershipID="116207556" ProgramID="ZX"/>
+        </Customer>
+        <PrefCollections>
+            <PrefCollection TravelPurpose="3">
+                <AirlinePref PreferLevel="Preferred">
+                    <AirportOriginPref LocationCode="YVR" PreferLevel="Preferred" CodeContext="IATA"/>
+                </AirlinePref>
+            </PrefCollection>
+        </PrefCollections>
+        <TPA_ProfileExtensions>
+            <SpecialDate Description="BIRTHDATE" Date="1983-08-16"/>
+            <CustDefinedData Name="Frequent Guest Program" Value="Y"/>
+            <CustDefinedData Name="Service Voucher" Value="0"/>
+            <CustDefinedData Name="Companion Voucher" Value="0"/>
+            <CustDefinedData Name="ACCOUNT_SMS_PREFERENCE" Value="OFF"/>
+            <Password LoginID="116207556" Password="aaa" PasswordHintQuestion="reminderQuestion4"
+                      PasswordHintAnswer="bbb"/>
+            <ProfileStatus Active="Active"/>
+            <Consent Category="INFORMATION SHARING" ContactType="DO NOT CONTACT"
+                     CategoryType="WITH NO EXTERNAL SOURCE"/>
+            <Consent Category="MARKETING" ContactType="DO NOT CONTACT" CategoryType="EMAIL CAMPAIGN"/>
+            <VITCustomer/>
+            <BusinessTraveler CreditBankInd="No" CorporateCd="SMC14">
+                <RelatedProfile RelatedProfileKind="EmployeeOf" RelatedProfileID="SMC14"
+                                RelatedProfileStatus="Active"/>
+                <RelatedProfile RelatedProfileKind="TravelBankCorpFOP" RelatedProfileID="SMC14"
+                                RelatedProfileStatus="Deactivated"/>
+            </BusinessTraveler>
+        </TPA_ProfileExtensions>
+    </Profile>
+</Response>
+

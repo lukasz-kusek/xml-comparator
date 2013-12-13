@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ The MIT License (MIT)
+  ~
+  ~ Copyright (c) 2013 Lukasz Kusek
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy of
+  ~ this software and associated documentation files (the "Software"), to deal in
+  ~ the Software without restriction, including without limitation the rights to
+  ~ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+  ~ the Software, and to permit persons to whom the Software is furnished to do so,
+  ~ subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+  ~ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  ~ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+  ~ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  ~ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+<Response>
+    <UniqueID ID="164190552" Type="1" ID_Context="VIT" Instance="2005-04-09T13:44:00.874444">
+        <CompanyName TravelSector="1" CodeContext="IATA" Code="ZX"/>
+    </UniqueID>
+    <Profile CreateDateTime="2005-04-09T13:44:00.874444" LastModifyDateTime="2005-04-09T13:44:00.874444"
+             ProfileType="1" ProfileSubType="VIT">
+        <Customer PrefLangID="en" Gender="Unknown">
+            <PersonName>
+                <GivenName>FAKE</GivenName>
+                <MiddleName>FAKE</MiddleName>
+                <Surname>FAKE</Surname>
+            </PersonName>
+            <Telephone DefaultInd="1" AreaCityCode="714" PhoneNumber="993-1234" PhoneType="Home"/>
+            <Telephone DefaultInd="0" AreaCityCode="714" PhoneNumber="924-5678" PhoneType="Business"/>
+            <Email DefaultInd="1">fake@abc.com</Email>
+            <CustLoyalty TravelSector="1" MembershipID="164190552" ProgramID="ZX" VIT_LineType="A"
+                         VIT_OrderNmbr="3" SignupDate="2004-06-23">
+                <PersonName>
+                    <GivenName>FAKE</GivenName>
+                    <MiddleName>FAKE</MiddleName>
+                    <Surname>FAKE</Surname>
+                </PersonName>
+            </CustLoyalty>
+            <CustLoyalty TravelSector="1" MembershipID="164190552" ProgramID="ZX" VIT_LineType="A"
+                         VIT_OrderNmbr="7"/>
+        </Customer>
+        <TPA_ProfileExtensions>
+            <CustLoyaltyTotals AccountBalance="7862" AccountType="FA" TierLevelIndicator2="0"
+                               TierLevelIndicator="0" PrizeEligibleAmount="7862"/>
+            <Remark TypeCode="AT" VIT_LineType="A" VIT_OrderNmbr="3">FAKE/FAKE A</Remark>
+            <Remark TypeCode="AT" VIT_LineType="A" VIT_OrderNmbr="7">FAKE1/FAKE1 ANN</Remark>
+            <Remark TypeCode="DP" VIT_LineType="N" VIT_OrderNmbr="10">MAKIKI STREET</Remark>
+            <Remark TypeCode="DP" VIT_LineType="N" VIT_OrderNmbr="11">NO. 301</Remark>
+            <Remark TypeCode="DP" VIT_LineType="N" VIT_OrderNmbr="12">HONOLULU, HI 96822</Remark>
+            <Remark TypeCode="PT" VIT_LineType="A" VIT_OrderNmbr="4">FAKE/FAKE A</Remark>
+            <Remark TypeCode="PT" VIT_LineType="A" VIT_OrderNmbr="5">FAKE/FAKE A</Remark>
+            <Remark TypeCode="UA" VIT_LineType="A" VIT_OrderNmbr="8">9HNL1-808-941-1234-H-FAKE/JO ANN
+            </Remark>
+            <Remark TypeCode="UA" VIT_LineType="A" VIT_OrderNmbr="9">9HNL1-808-841-5678-B-FAKE/JO ANN
+            </Remark>
+            <ProfileStatus Active="Active"/>
+        </TPA_ProfileExtensions>
+    </Profile>
+</Response>
+

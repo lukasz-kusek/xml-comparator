@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ The MIT License (MIT)
+  ~
+  ~ Copyright (c) 2013 Lukasz Kusek
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy of
+  ~ this software and associated documentation files (the "Software"), to deal in
+  ~ the Software without restriction, including without limitation the rights to
+  ~ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+  ~ the Software, and to permit persons to whom the Software is furnished to do so,
+  ~ subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+  ~ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  ~ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+  ~ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  ~ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+<Response>
+    <UniqueID ID="14383251" ID_Context="VIT" Instance="2004-12-09T05:10:34.602436" Type="1">
+        <CompanyName Code="ZX"/>
+    </UniqueID>
+    <Profile CreateDateTime="2004-12-09T05:10:34.602436" LastModifyDateTime="2004-12-09T05:10:34.602436"
+             ProfileSubType="VIT" ProfileType="1">
+        <Customer Gender="Female" PrefLangID="en">
+            <PersonName VIT_LineType="A" VIT_OrderNmbr="1">
+                <GivenName>FAKE</GivenName>
+                <Surname>FAKE</Surname>
+            </PersonName>
+            <Telephone AreaCityCode="0" CountryAccessCode="0" DefaultInd="0" PhoneNumber="457258410"
+                       PhoneType="Home" VIT_LineType="A" VIT_OrderNmbr="3"/>
+            <Email DefaultInd="0" VIT_LineType="A" VIT_OrderNmbr="7">fake@abc.com</Email>
+            <Address DefaultInd="1" IsAddressNew="No" VIT_LineType="O" VIT_OrderNmbr="9">
+                <StreetNmbr>STREET</StreetNmbr>
+                <AddressLine>ADDRESS LINE</AddressLine>
+                <PostalCode>POSTALCODE</PostalCode>
+                <CountryName Code="AA"/>
+                <Addressee>ADDRESSEE</Addressee>
+            </Address>
+            <CitizenCountryName Code="AA"/>
+            <CustLoyalty MembershipID="14383251" ProgramID="ZX" SignupDate="2000-07-03" VIT_LineType="A"
+                         VIT_OrderNmbr="15"/>
+        </Customer>
+        <TPA_ProfileExtensions>
+            <CustLoyaltyTotals AccountBalance="0" AccountType="FA" LatestAwardAmount="0" MilesToExpire="0"
+                               PreferenceRank="0" PrizeEligibleAmount="0" TierLevelIndicator="2"/>
+            <Remark TypeCode="DA" VIT_LineType="O" VIT_OrderNmbr="11">1</Remark>
+            <Access>
+                <LastUpdateInfo AgentSign="TPF" DutyCode="#" HomeStation="MHP" LNIATA="TAPUPL"
+                                LastModifyDateTime="2004-12-09T05:10:34.602436" OriginCode="Tape"/>
+                <HistoryInfo AgentSign="TPF" DutyCode="#" HistoricalDateTime="2004-12-09T05:10:34.602436"
+                             HomeStation="MHP" LNIATA="TAPUPL"/>
+                <CreateInfo AuditData="MHP # TPF 2004-12-09T05:10:34.602436 TAPUPL"
+                            CreateDateTime="2004-12-09T05:10:34.602436" DutyCode="#" OriginCode="Tape"/>
+            </Access>
+        </TPA_ProfileExtensions>
+    </Profile>
+</Response>

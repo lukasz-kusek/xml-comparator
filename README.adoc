@@ -4,6 +4,354 @@
 
 XML comparing tool provides an utility for XML documents comparison.
 
+=== HOW-TO
+
+==== XmlComparator
+
+Base class of this utility is +XMLComparator+. You can compare two XML documents stored as a String using
+
+[source,java]
+XMLComparator.compare(xml1, xml2);
+
+Below you can see sample use cases
+
+* Exactly the same XML files
++
+.xml1
+[source,xml]
+----
+<xml>
+    <element value="abc"/>
+</xml>
+----
++
+.xml2
+[source,xml]
+----
+<xml><element value="abc"/></xml>
+----
++
++xml1+ and +xml2+ will be reported as equal.
+
+* Attributes in a different order
++
+.xml1
+[source,xml]
+----
+<xml>
+    <element value1="abc" value2="def"/>
+</xml>
+----
++
+.xml2
+[source,xml]
+----
+<xml>
+    <element value2="def" value1="abc"/>
+</xml>
+----
++
++xml1+ and +xml2+ will be reported as equal.
+
+* Elements of the same type in a different order
++
+.xml1
+[source,xml]
+----
+<xml>
+    <element value="abc"/>
+    <element value="def"/>
+</xml>
+----
++
+.xml2
+[source,xml]
+----
+<xml>
+    <element value="def"/>
+    <element value="abc"/>
+</xml>
+----
++
++xml1+ and +xml2+ will be reported as equal because this utility treats *following elements of the same type* as a *collection, not a list*.
+
+* Elements of different types in a different order
++
+.xml1
+[source,xml]
+----
+<xml>
+    <elementABC value="abc"/>
+    <elementDEF value="def"/>
+</xml>
+----
++
+.xml2
+[source,xml]
+----
+<xml>
+    <elementDEF value="def"/>
+    <elementABC value="abc"/>
+</xml>
+----
++
++XMLComparator+ will report a discrepancy between +xml1+ and +xml2+.
+
+* Elements of the same type in a different order where one element has discrepancies
++
+.xml1
+[source,xml]
+----
+<xml>
+    <element value="abc"/>
+    <element value="def"/>
+</xml>
+----
++
+.xml2
+[source,xml]
+----
+<xml>
+    <element value="ghi"/>
+    <element value="abc"/>
+</xml>
+----
++
++XMLComparator+ will *find the best match* between elements of the same type and report only one discrepancy.
+
+==== XmlComparatorBuilder
+
+Instead of using +XMLComparator+
+
+[source,java]
+XMLComparator.compare(xml1, xml2);
+
+you can use fluent API
+
+[source,java]
+----
+XMLComparator.builder()
+    .first(xml1)
+    .second(xml2)
+    .compare();
+----
+
++XMLComparatorBuilder+ has additional features
+
+* *Value extractors*
++
+Value extractors are used if you want to specify how the value used for comparison is being extracted from given XPath.
++
+[source,java]
+----
+XMLComparator.builder()
+    .first(xml1)
+    .second(xml2)
+    .valueExtractors(ImmutableMap.of("/xml/element/@value", "[^:]*:(.*)"))
+    .compare();
+----
++
+.xml1
+[source,xml]
+----
+<xml>
+    <element value="timestamp123:abc"/>
+</xml>
+----
++
+.xml2
+[source,xml]
+----
+<xml>
+    <element value="timestamp456:abc"/>
+</xml>
+----
++
++xml1+ and +xml2+ will be reported as equal.
+
+* *Ignore namespaces*
++
+If you want to omit namespaces declarations when comparing XML files you can set to ignore namespaces.
++
+[source,java]
+----
+XMLComparator.builder()
+    .first(xml1)
+    .second(xml2)
+    .ignoreNamespaces(true)
+    .compare();
+----
++
+.xml1
+[source,xml]
+----
+<abc:xml xmlns:abc="http://www.abc.com">
+    <abc:element value="abc"/>
+</abc:xml>
+----
++
+.xml2
+[source,xml]
+----
+<def:xml xmlns:def="http://www.def.com">
+    <def:element value="abc"/>
+</def:xml>
+----
++
++xml1+ and +xml2+ will be reported as equal.
+
+* *Ignore XPaths*
++
+You can specify that some XPaths shouldn't be used while comparing XMLs.
++
+[source,java]
+----
+XMLComparator.builder()
+    .first(xml1)
+    .second(xml2)
+    .xPathsToOmit(ImmutableSet.of("element/@ignored"))
+    .compare();
+----
++
+.xml1
+[source,xml]
+----
+<xml>
+    <element value="abc" ignored="123" />
+</xml>
+----
++
+.xml2
+[source,xml]
+----
+<xml>
+    <element value="abc"/>
+</xml>
+----
++
++xml1+ and +xml2+ will be reported as equal.
+
+==== XmlDiff
+
+As a result of XMLs comparison you'll get an object of +XMLDiff+ class
+
+[source,java]
+XMLDiff xmlDiff = XMLComparator.compare(xml1, xml2);
+
+[source,java]
+----
+XMLDiff xmlDiff = XMLComparator.builder()
+    .first(xml1)
+    .second(xml2)
+    .compare();
+----
+
+You can extract information about discrepancies using methods
+
+[source,java]
+xmlDiff.getDifferenceInformationSet();
+xmlDiff.getUniqueDifferenceInformationSet();
+
+The following example describes difference between these two methods:
+
+.xml1
+[source,xml]
+----
+<xml>
+    <element value="abc"/>
+    <element value="def"/>
+</xml>
+----
+
+.xml2
+[source,xml]
+----
+<xml>
+    <element value="ghi"/>
+    <element value="jkl"/>
+</xml>
+----
+
+After you compare above XMLs, you can extract information:
+
+[source,java]
+Set<DifferenceInformation> differenceInformationSet = xmlDiff.getDifferenceInformationSet();
+
+Above set will contain all discrepancies
+
+----
+/xml/element[1]/@value
+/xml/element[2]/@value
+----
+
+[source,java]
+Set<DifferenceInformation> differenceInformationSet = xmlDiff.getUniqueDifferenceInformationSet();
+
+Above set will contain only unique pairs +<SimpleXPath, DifferenceCode>+
+
+----
+/xml/element/@value
+----
+
+==== DifferenceInformation
+
+Each +DifferenceInformation+ object will contain information about one discrepancy on a single XPath.
+
+You can get full XPath using
+
+[source,java]
+String xPath = differenceInformation.getXPath();
+
+as a result you'll get
+
+----
+/xml/element[2]/@value
+----
+
+You can get simple XPath using
+
+[source,java]
+String xPath = differenceInformation.getSimpleXPath();
+
+as a result you'll get
+
+----
+/xml/element/@value
+----
+
+You can get code describing a type of a discrepancy
+
+[source,java]
+DifferenceCode differenceCode = differenceInformation.getDifferenceCode();
+
+All available code can be found in an enum +DifferenceCode+
+
+[source,java]
+public enum DifferenceCode {
+    DIFFERENT_ROOT_NODE,
+    MISSING_ELEMENT_IN_SECOND_DOCUMENT,
+    MISSING_ELEMENT_IN_FIRST_DOCUMENT,
+    DIFFERENT_VALUE,
+    DIFFERENT_ATTRIBUTE_VALUE,
+    INCORRECT_ORDER;
+}
+
+You can get a message describing a discrepancy
+
+[source,java]
+String message = differenceInformation.getMessage();
+
+Available message templates you are listed below
+
+----
+First root node: %s is different from second root node: %s
+Xpath exists in first xml document but doesn't exist in second one.
+Xpath exists in second xml document but doesn't exist in first one.
+Value differs. First: %s. Second: %s
+Attribute value differs. First: %s. Second: %s
+Element from first document exists in first in incorrect order.
+----
+
 === COPYRIGHT
 
 Copyright (c) 2013 Lukasz Kusek

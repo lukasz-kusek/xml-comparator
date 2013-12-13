@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ The MIT License (MIT)
+  ~
+  ~ Copyright (c) 2013 Lukasz Kusek
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy of
+  ~ this software and associated documentation files (the "Software"), to deal in
+  ~ the Software without restriction, including without limitation the rights to
+  ~ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+  ~ the Software, and to permit persons to whom the Software is furnished to do so,
+  ~ subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+  ~ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  ~ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+  ~ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  ~ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+<Response>
+    <UniqueID ID="164190552" ID_Context="VIT" Instance="2005-04-09T13:44:00.874444" Type="1">
+        <CompanyName Code="ZX"/>
+    </UniqueID>
+    <Profile CreateDateTime="2005-04-09T13:44:00.874444" LastModifyDateTime="2005-04-09T13:44:00.874444"
+             ProfileSubType="VIT" ProfileType="1">
+        <Customer PrefLangID="en">
+            <PersonName VIT_LineType="A" VIT_OrderNmbr="2">
+                <GivenName>FAKE</GivenName>
+                <MiddleName>FAKE</MiddleName>
+                <Surname>FAKE</Surname>
+            </PersonName>
+            <Telephone AreaCityCode="714" DefaultInd="1" PhoneNumber="993-1234" PhoneType="Home"
+                       VIT_LineType="A" VIT_OrderNmbr="4"/>
+            <Telephone AreaCityCode="714" DefaultInd="1" PhoneNumber="924-5678" PhoneType="Business"
+                       VIT_LineType="A" VIT_OrderNmbr="5"/>
+            <Email DefaultInd="1" VIT_LineType="A" VIT_OrderNmbr="6">fake@abc.com</Email>
+            <CustLoyalty MembershipID="164190552" ProgramID="ZX" SignupDate="2004-06-23" VIT_LineType="A"
+                         VIT_OrderNmbr="3">
+                <PersonName>
+                    <GivenName>FAKE</GivenName>
+                    <MiddleName>FAKE</MiddleName>
+                    <Surname>FAKE</Surname>
+                </PersonName>
+            </CustLoyalty>
+            <CustLoyalty MembershipID="164190552" ProgramID="ZX" TravelSector="1" VIT_LineType="A"
+                         VIT_OrderNmbr="7"/>
+        </Customer>
+        <TPA_ProfileExtensions>
+            <CustLoyaltyTotals AccountBalance="7862" AccountType="FA" PrizeEligibleAmount="7862"
+                               TierLevelIndicator="0" TierLevelIndicator2="0"/>
+            <CustLoyaltyTotals AccountType="FA" TierLevelIndicator="0" TierLevelIndicator2="0"/>
+            <Remark TypeCode="AT" VIT_LineType="A" VIT_OrderNmbr="7">FAKE1/FAKE1 ANN</Remark>
+            <Remark TypeCode="AT" VIT_LineType="A" VIT_OrderNmbr="3">FAKE/FAKE A</Remark>
+            <Remark TypeCode="DP" VIT_LineType="N" VIT_OrderNmbr="11">NO. 301</Remark>
+            <Remark TypeCode="UA" VIT_LineType="A" VIT_OrderNmbr="9">9HNL1-808-841-5678-B-FAKE/JO ANN
+            </Remark>
+            <Remark TypeCode="PT" VIT_LineType="A" VIT_OrderNmbr="4">FAKE/FAKE A</Remark>
+            <Remark TypeCode="PT" VIT_LineType="A" VIT_OrderNmbr="5">FAKE/FAKE A</Remark>
+            <Remark TypeCode="DP" VIT_LineType="N" VIT_OrderNmbr="10">MAKIKI STREET</Remark>
+            <Remark TypeCode="UA" VIT_LineType="A" VIT_OrderNmbr="8">9HNL1-808-941-1234-H-FAKE/JO ANN
+            </Remark>
+            <Remark TypeCode="DP" VIT_LineType="N" VIT_OrderNmbr="12">HONOLULU, HI 96822</Remark>
+            <Access>
+                <LastUpdateInfo AgentSign="HXC" DutyCode="7" HomeStation="MHP" LNIATA="95B704"
+                                LastModifyDateTime="2005-04-09T13:44:00.874444" OriginCode="abc"/>
+                <HistoryInfo AgentSign="HXC" DutyCode="7" HistoricalDateTime="2005-04-09T13:44:00.874444"
+                             HomeStation="MHP" LNIATA="95B704"/>
+                <CreateInfo AuditData="MHP 7 HXC 2005-04-09T13:44:00.874444 95B704"
+                            CreateDateTime="2005-04-09T13:44:00.874444" DutyCode="7" OriginCode="abc"/>
+            </Access>
+        </TPA_ProfileExtensions>
+    </Profile>
+</Response>
