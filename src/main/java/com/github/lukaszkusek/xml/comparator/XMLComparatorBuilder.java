@@ -48,7 +48,7 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
 import com.google.common.io.Resources;
 
-class XMLComparatorBuilder {
+public class XMLComparatorBuilder {
 
     private XMLComparator xmlComparator;
 
