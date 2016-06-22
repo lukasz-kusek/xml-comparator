@@ -352,6 +352,29 @@ Attribute value differs. First: %s. Second: %s
 Element from first document exists in first in incorrect order.
 ----
 
+=== DOWNLOAD
+
+Add dependency and repository to your pom file
+
+[source,xml]
+---
+<dependency>
+    <groupId>com.github.lukasz-kusek</groupId>
+    <artifactId>xml-comparator</artifactId>
+    <version>-SNAPSHOT</version>
+</dependency>
+---
+
+[source,xml]
+---
+<repositories>
+    <repository>
+        <id>jitpack</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+---
+
 === COPYRIGHT
 
 Copyright (c) 2013 Lukasz Kusek

@@ -23,12 +23,11 @@
 
 package com.github.lukaszkusek.xml.comparator.util;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
+
+import java.io.IOException;
+import java.net.URL;
 
 public final class ResourceReader {
 
@@ -36,10 +35,6 @@ public final class ResourceReader {
 
     public static String getFileContent(String fileName) throws IOException {
         return Resources.toString(getURL(fileName), Charsets.UTF_8);
-    }
-
-    public static InputStream getInputStream(final String fileName) throws IOException {
-        return Resources.newInputStreamSupplier(getURL(fileName)).getInput();
     }
 
     public static URL getURL(final String fileName) {
