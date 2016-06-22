@@ -361,7 +361,7 @@ Add dependency and repository to your pom file
 <dependency>
     <groupId>com.github.lukasz-kusek</groupId>
     <artifactId>xml-comparator</artifactId>
-    <version>-SNAPSHOT</version>
+    <version>0.0.1</version>
 </dependency>
 ---
 
